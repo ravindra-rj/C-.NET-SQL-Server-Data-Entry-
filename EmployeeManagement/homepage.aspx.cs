@@ -29,8 +29,8 @@ namespace EmployeeManagement
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=emplmanage;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            SqlCommand cmd = new SqlCommand(@"UPDATE [dbo].[Table] SET[userid] = '" + txtUserID.Text + "',[password]='"+txtPass.Text+"',[role]='"+txtRole.Text+"'", con);
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=dataemp;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlCommand cmd = new SqlCommand(@"UPDATE [dbo].[Table] SET [password]='"+txtPass.Text+"',[role]='"+txtRole.Text+ "' WHERE [userid] = '" + txtUserID.Text + "'", con);
             con.Open();
             cmd.ExecuteNonQuery();
             Response.Write("Data Updated");
@@ -39,7 +39,7 @@ namespace EmployeeManagement
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=dataemp;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             SqlCommand cmd = new SqlCommand(@"DELETE FROM [dbo].[Table] WHERE [userid] = '"+txtUserID.Text+"'", con);
             con.Open();
             cmd.ExecuteNonQuery();
