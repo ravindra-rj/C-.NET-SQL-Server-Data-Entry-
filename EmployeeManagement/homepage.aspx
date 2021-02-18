@@ -9,7 +9,11 @@
 <body>
     <form id="form1" runat="server">
         <div >
+
+<!- Table created for containing input text and button ->
             <table align="center">
+
+<!- text input space ->
                 <tr>
                     <td>UserID</td>
                     <td>
@@ -28,6 +32,8 @@
                 <tr>
                     <td>
                         &nbsp;</td>
+
+<!- Buttons for communicating with database ->
                     <td>
                         &nbsp;<asp:Button ID="btnInsert" runat="server" Text="Insert" OnClick="btnInsert_Click" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

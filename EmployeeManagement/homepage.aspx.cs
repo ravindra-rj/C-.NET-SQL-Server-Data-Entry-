@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+// required namespaces for project
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,7 +17,8 @@ namespace EmployeeManagement
         {
 
         }
-
+ 
+        // work done by insert button when it hits
         protected void btnInsert_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=dataemp;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -27,6 +30,7 @@ namespace EmployeeManagement
             con.Close();
         }
 
+        // work done by update button when it hits
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=dataemp;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -37,6 +41,7 @@ namespace EmployeeManagement
             con.Close();
         }
 
+        // work done by delete button when it hits
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=dataemp;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
